@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+a{
+  color: rgb(0, 69, 173);
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -16,6 +19,47 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.nav-bar{
-  
+.auth-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
 }
+
+.auth-container form{
+  width: 300px;
+  min-height: 60vh;
+  padding: 1em;
+  border: 1px solid dodgerblue;
+  border-radius: 10px;
+}
+
+.auth-container form input{
+  border: 1px solid dodgerblue;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0.5em 0em;
+}
+
+.auth-container form input:focus{
+  outline: none;
+  color: green;
+}
+
+.auth-container form button{
+  width: 100%;
+  background-color: dodgerblue;
+  color: white;
+  /* transition: background-color 3s, color 3s; */
+}
+
+
+/* .auth-container form button:hover{
+  color: dodgerblue;
+  background-color: rgb(89, 200, 255);
+} */
+
+.auth-container form .form-group{
+  margin: 1em;
+}
+
