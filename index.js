@@ -3,16 +3,27 @@ dotenv.config();
 const express = require('express');
 const app = express();
 
+const cors = require('cors');
+const bodyparser = require('body-parser');
+const cookieParser = require('cookie-parser');
+
 const port = process.env.PORT;
 if (!port) {
     console.log("Application unable to access any port!!");
     process.exit(1);
 }
 
+// middlewares
+app.use(cors());
+app.use(express.json());
+app.use(bodyparser.json());
+app.use(cookieParser());
+
 // imports
 const userRoutes = require('./routes/user.Route.js');
 const taskRouter = require('./routes/task.Route.js');
 const { connectDB } = require('./config/db.js');
+const cookieParser = require('cookie-parser');
 
 // routes
 app.use('/api/v1', userRoutes);
