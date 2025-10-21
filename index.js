@@ -23,7 +23,7 @@ app.use(cookieParser());
 const userRoutes = require('./routes/user.Route.js');
 const taskRouter = require('./routes/task.Route.js');
 const { connectDB } = require('./config/db.js');
-const cookieParser = require('cookie-parser');
+
 
 // routes
 app.use('/api/v1', userRoutes);

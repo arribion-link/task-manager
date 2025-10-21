@@ -2,15 +2,10 @@ const mongoose = require("mongoose");
 
 const taskSchema = new mongoose.Schema(
   {
-    taskId: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    userId: {
-      type: String,
-      required: true,
-    },
+    // userId: {
+    //   type: String,
+    //   required: true,
+    // },
     title: {
       type: String,
       required: true,
@@ -44,6 +39,6 @@ const taskSchema = new mongoose.Schema(
   }
 );
 
-const Task = mongoose.model("Task", taskSchema);
+const taskModel = mongoose.model("Task", taskSchema);
 
-module.exports = Task;
+module.exports = taskModel;

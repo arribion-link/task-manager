@@ -1,6 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = process.env.JWT_SECRET;
+console.log(JWT_SECRET);
 if (!JWT_SECRET) {
     console.log('failed to fetch json web token secret!!');
     process.exit(1);
